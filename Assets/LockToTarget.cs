@@ -12,6 +12,8 @@ public class LockToTarget : MonoBehaviour
     {
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
+        //transform.rotation - lookRotation;
+        //biz sadece ye eksininde donmesini istedigimiz icin asagida tekrar euler e cevirip y eksenini dondurduk
         
         //burada slerp de kullanilabilir
         Vector3 rotation = lookRotation.eulerAngles;
